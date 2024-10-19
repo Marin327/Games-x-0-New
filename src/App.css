@@ -1,0 +1,219 @@
+/* Общи стилове за приложението */
+.app {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px; /* Добавяне на закръглени ъгли */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Стилове за Header */
+.header {
+  background-color: #4caf50; /* Зелено */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px; /* Добавяне на закръглени ъгли */
+}
+
+/* Стилове за PlayerInfo */
+.player-info {
+  background-color: #f4f4f4;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 8px; /* Добавяне на закръглени ъгли */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+/* Стилове за Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 8px; /* Добавяне на закръглени ъгли */
+}
+
+/* Стилове за ResetButton */
+.reset-button {
+  background-color: #ff6666; /* Червен фон */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Закръглени ъгли */
+  margin-bottom: 20px;
+  transition: background-color 0.3s; /* Плавна промяна на фона */
+}
+
+.reset-button:hover {
+  background-color: #e55; /* По-тъмен червен при задържане */
+}
+
+/* Стилове за GameHistory */
+.game-history {
+  padding: 15px;
+  background-color: #e6e6e6;
+  border-radius: 8px; /* Добавяне на закръглени ъгли */
+}
+
+/* Стилове за Timer */
+.timer {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px; /* Закръглени ъгли */
+}
+
+/* Стилове за Settings */
+.settings {
+  background-color: #4caf50; /* Зелено */
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px; /* Добавяне на закръглени ъгли */
+}
+
+/* Стилове за Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px; /* Добавяне на закръглени ъгли */
+}
+
+/* Стилове за ThemeSwitcher */
+.theme-switcher {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Стилове за Notification */
+.notification {
+  background-color: #ffeb3b;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 5px; /* Закръглени ъгли */
+}
+
+/* Стилове за Statistics */
+.statistics {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px; /* Добавяне на закръглени ъгли */
+}
+
+.statistics h2 {
+  margin-bottom: 10px;
+}
+
+.statistics p {
+  margin: 5px 0;
+}
+
+/* Стилове за Leaderboard */
+.leaderboard {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px; /* Добавяне на закръглени ъгли */
+}
+
+.leaderboard h2 {
+  margin-bottom: 10px;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard th {
+  background-color: #f2f2f2;
+}
+
+/* Стилове за Game компонент */
+.game {
+  margin-top: 20px;
+}
+
+/* Стилове за Board */
+.board-row {
+  display: flex;
+}
+
+/* Стилове за Square компонент */
+.square {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px; /* Закръглени ъгли */
+  transition: background-color 0.2s; /* Плавна промяна на фона */
+}
+
+.square:hover {
+  background-color: #e6e6e6; /* Лек фон при задържане */
+}
+
+.square.x {
+  color: #f44336; /* Червен цвят за 'X' */
+}
+
+.square.o {
+  color: #2196f3; /* Син цвят за 'O' */
+}
+.winning-square {
+  background-color: #4caf50; /* Зелен цвят за победен ред */
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background-color: #4caf50;
+  }
+  50% {
+    background-color: #a5d6a7;
+  }
+}
+
+.game {
+  background-image: url("./pictures/01.jpg"); /* Задай пътя към твоето изображение */
+  background-size: cover; /* Задава изображението да покрива целия контейнер */
+  background-position: center; /* Центрира изображението */
+  height: 100vh; /* Задава височината на играта */
+  display: flex; /* Позволява подредба на елементите */
+  flex-direction: column; /* Подрежда елементите вертикално */
+  justify-content: center; /* Центрира елементите по вертикалата */
+  align-items: center; /* Центрира елементите по хоризонталата */
+  color: white; /* Променя цвета на текста */
+}
+
+h1 {
+  margin-bottom: 20px; /* Добавя малко разстояние под заглавието */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Придава ефект на сенки на текста */
+}
